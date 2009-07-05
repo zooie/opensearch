@@ -1,0 +1,15 @@
+
+@author Vik Singh (viksi@yahoo-inc.com)
+
+This is a public git repository for hosting opensearch projects, libraries, examples, and benchmarks
+
+Main topics:
+
+Open Search Services ([main|exp]/services/)
+===========================================
+BOSS, Bing, AJAX Search API, Twitter Search API, Mashups
+
+Open Source Vertical Indexing Platforms ([main|exp]/software/)
+==============================================================
+Lucene, sphinx, zettair, RDBMS, Xapian, Terrier, etc.
+Benchmarks, unifying interfaces

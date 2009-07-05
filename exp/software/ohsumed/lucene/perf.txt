@@ -1,0 +1,33 @@
+
+index peak memory
+37m
+
+index time
+2m4.572s
+
+index time (w/ optimization)
+2m15.294s
+
+index size (w/o optimization)
+90722553
+
+index size
+89269733
+
+data size
+300030495
+
+records
+196403
+
+search peak memory
+18m
+
+search time
+1.366s
+
+search relevancy
+5.59715145439
+
+queries size
+63

@@ -1,0 +1,30 @@
+
+# generates build.xml for sphinx indexing
+
+python codegen.py
+
+rm -fr medindex
+mkdir medindex
+
+# change dirs in sphinx.conf to point to where this src is
+
+# runs indexer according to sphinx.conf settings
+
+time indexer --quiet --config sphinx.conf medindex
+
+# point java's classpath to wherever your sphinx api jar is
+
+javac -cp /Users/viksi/sphinx-0.9.8.1/api/java/sphinxapi.jar:. Search.java
+
+# starts sphinx's searchd server
+
+searchd
+
+# runs java client for searching
+
+time java -cp /Users/viksi/sphinx-0.9.8.1/api/java/sphinxapi.jar:. Search > results.txt
+
+# compute relevance
+
+cd ../
+cat sphinx/results.txt | python scorer.py

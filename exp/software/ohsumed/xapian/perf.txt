@@ -1,0 +1,36 @@
+
+index peak memory
+48m
+
+index time
+6m38.168s
+
+index time (w/ postings)
+8m53.874s
+
+index size
+339334337
+
+index size (w/ postings)
+886920582
+
+search peak memory
+1.4m
+
+search time
+0m1.440s
+
+search time (w/ postings)
+0m1.731s
+
+search relevancy
+5.58530010872
+
+search relevancy (w/ postings)
+5.56718994129
+
+data size
+300030495
+
+records
+196403

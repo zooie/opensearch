@@ -1,0 +1,16 @@
+
+# change dir to point to your lucene core jar
+
+javac -cp /Users/viksi/lucene-2.4.1/lucene-core-2.4.1.jar:. Index.java
+
+# remove any existing indices
+
+rm -fr index/
+time java -cp /Users/viksi/lucene-2.4.1/lucene-core-2.4.1.jar:. Index
+
+time java -cp /Users/viksi/lucene-2.4.1/lucene-core-2.4.1.jar:. Search > results.txt
+
+python ../fsize.py index
+
+cd ..
+cat lucene/results.txt | python scorer.py

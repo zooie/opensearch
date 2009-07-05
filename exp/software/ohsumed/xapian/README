@@ -1,0 +1,38 @@
+
+# i was lazy here about doing Makefiles
+# i overrode the existing index and search files in the Xapian examples dir
+
+# in simpleindex.cc and simplesearch.cc change the file locations
+# to point to wherever your ohsumed.flat and queries.txt are
+
+# where you extracted Xapian might differ and require changing the dir location below
+# from ohsumed/xapian dir
+
+cp simplesearch.cc ~/xapian-core-1.0.13/examples/
+cp simpleindex.cc ~/xapian-core-1.0.13/examples/
+
+cd ~/xapian-core-1.0.13/examples/
+
+# no need to change the Makefile; just re-make
+
+make
+
+# remove any existing indices
+
+rm -fr medindex
+
+time ./simpleindex
+time ./simplesearch > results.txt
+
+# creates medindex folder
+
+# cd wherever you extracted ohsumed
+cd /Users/viksi/git/opensearch/exp/software/ohsumed
+
+# size of index
+
+python fsize.py ~/xapian-core-1.0.13/examples/medindex
+
+# compute relevancy of results
+
+cat ~/xapian-core-1.0.13/examples/results.txt | python scorer.py

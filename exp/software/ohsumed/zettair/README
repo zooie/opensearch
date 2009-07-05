@@ -1,0 +1,24 @@
+
+# generates build.trec file
+
+python codegen.py
+
+# create fresh index directory
+rm -fr index
+mkdir index
+
+# index into this new directory
+cd index
+time zet -t TREC -i ../build.trec
+
+# run queries
+time zet --query-list=../../queries.txt -n 10 > ../batch.txt
+
+# generate results.txt from batch.txt (stdout of zettair search)
+
+python results_parser.py
+
+# compute relevance
+
+cd ../../
+cat zettair/results.txt | python scorer.py

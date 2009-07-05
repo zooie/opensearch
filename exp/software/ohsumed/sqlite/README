@@ -1,0 +1,20 @@
+
+# sqlite must have FTS3 enabled (may need to recompile)
+
+# generates build.sql for indexing
+
+python codegen_build.py
+
+# generates query.sql for searching
+
+python codegen_query.py
+
+# change dir to point to your sqlite3 fts3 enabled executable
+
+time ~/sqlite36/sqlite-3.6.11/sqlite3 index.db < build.sql
+time ~/sqlite36/sqlite-3.6.11/sqlite3 index.db < query.sql > results.txt
+
+# compute relevance
+
+cd ../
+cat sqlite/results.txt | python scorer.py

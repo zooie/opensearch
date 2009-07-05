@@ -1,0 +1,11 @@
+
+# tested with python2.6
+
+# download filtering.tar.gz from http://trec.nist.gov/data/t9_filtering.html
+# cp ohsumed.88-91 qrels.ohsu.88-91 query.ohsu.1-63 into this dir
+
+# to generate ohsumed.flat and queries.txt
+python etl.py
+python etl_queries.py
+
+# then can cd into any of the vertical search directories (i.e. lucene/) and follow its README
