@@ -1,5 +1,7 @@
 
-# tested with python2.6
+@ author Vik Singh (viksi@yahoo-inc.com)
+
+# building scripts tested with python 2.6 (but I think it should work with 2.5)
 
 # download filtering.tar.gz from http://trec.nist.gov/data/t9_filtering.html
 # cp ohsumed.88-91 qrels.ohsu.88-91 query.ohsu.1-63 into this dir
