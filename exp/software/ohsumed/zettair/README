@@ -16,9 +16,11 @@ time zet --query-list=../../queries.txt -n 10 > ../batch.txt
 
 # generate results.txt from batch.txt (stdout of zettair search)
 
+cd ..
+
 python results_parser.py
 
 # compute relevance
 
-cd ../../
+cd ..
 cat zettair/results.txt | python scorer.py
