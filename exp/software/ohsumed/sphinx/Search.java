@@ -14,8 +14,8 @@ public class Search {
 		SphinxClient cl = new SphinxClient();
 
 		cl.SetServer ("localhost", 8002);
-		cl.SetWeights (new int[] {100, 1});
-		cl.SetMatchMode (SphinxClient.SPH_MATCH_ANY);
+		//cl.SetWeights (new int[] {100, 1});
+		//cl.SetMatchMode (SphinxClient.SPH_MATCH_ANY);
 		cl.SetLimits (0, 10);
 		cl.SetSortMode (SphinxClient.SPH_SORT_RELEVANCE, "");
 
